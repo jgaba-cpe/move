@@ -1,0 +1,70 @@
+[debug] [2022-12-16T09:10:28.646Z] ----------------------------------------------------------------------
+[debug] [2022-12-16T09:10:28.648Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\acer\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-12-16T09:10:28.648Z] CLI Version:   11.16.1
+[debug] [2022-12-16T09:10:28.648Z] Platform:      win32
+[debug] [2022-12-16T09:10:28.648Z] Node Version:  v16.15.0
+[debug] [2022-12-16T09:10:28.650Z] Time:          Fri Dec 16 2022 17:10:28 GMT+0800 (Philippine Standard Time)
+[debug] [2022-12-16T09:10:28.650Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-16T09:10:28.704Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-16T09:10:28.705Z] > authorizing via signed-in user (qjpgaba@tip.edu.ph)
+[debug] [2022-12-16T09:10:28.705Z] [iam] checking project outreach-planner-cpe for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2022-12-16T09:10:28.706Z] > refreshing access token with scopes: []
+[debug] [2022-12-16T09:10:28.708Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-16T09:10:28.708Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-16T09:10:29.903Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-16T09:10:29.903Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-16T09:10:29.921Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/outreach-planner-cpe:testIamPermissions [none]
+[debug] [2022-12-16T09:10:29.921Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/outreach-planner-cpe:testIamPermissions x-goog-quota-user=projects/outreach-planner-cpe
+[debug] [2022-12-16T09:10:29.922Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/outreach-planner-cpe:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2022-12-16T09:10:31.669Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/outreach-planner-cpe:testIamPermissions 200
+[debug] [2022-12-16T09:10:31.669Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/outreach-planner-cpe:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2022-12-16T09:10:31.671Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/outreach-planner-cpe [none]
+[debug] [2022-12-16T09:10:32.284Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/outreach-planner-cpe 200
+[debug] [2022-12-16T09:10:32.285Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/outreach-planner-cpe {"projectId":"outreach-planner-cpe","projectNumber":"379355534849","displayName":"outreach-planner-cpe","name":"projects/outreach-planner-cpe","resources":{"hostingSite":"outreach-planner-cpe","storageBucket":"outreach-planner-cpe.appspot.com","locationId":"asia-northeast1"},"state":"ACTIVE","etag":"1_93c81bf7-25da-47c0-ad7a-d8fd6684cfd2"}
+[info] 
+[info] === Deploying to 'outreach-planner-cpe'...
+[info] 
+[info] i  deploying storage, firestore, hosting 
+[debug] [2022-12-16T09:10:32.287Z] >>> [apiv2][query] GET https://appengine.googleapis.com/v1/apps/outreach-planner-cpe [none]
+[debug] [2022-12-16T09:10:32.731Z] <<< [apiv2][status] GET https://appengine.googleapis.com/v1/apps/outreach-planner-cpe 200
+[debug] [2022-12-16T09:10:32.731Z] <<< [apiv2][body] GET https://appengine.googleapis.com/v1/apps/outreach-planner-cpe {"name":"apps/outreach-planner-cpe","id":"outreach-planner-cpe","authDomain":"gmail.com","locationId":"asia-northeast1","codeBucket":"staging.outreach-planner-cpe.appspot.com","servingStatus":"SERVING","defaultHostname":"outreach-planner-cpe.an.r.appspot.com","defaultBucket":"outreach-planner-cpe.appspot.com","serviceAccount":"outreach-planner-cpe@appspot.gserviceaccount.com","gcrDomain":"asia.gcr.io","databaseType":"CLOUD_FIRESTORE","featureSettings":{"splitHealthChecks":true,"useContainerOptimizedOs":true}}
+[info] i  firebase.storage: checking storage.rules for compilation errors... 
+[debug] [2022-12-16T09:10:32.733Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test [none]
+[debug] [2022-12-16T09:10:32.733Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test [omitted]
+[debug] [2022-12-16T09:10:34.129Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test 200
+[debug] [2022-12-16T09:10:34.129Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test {}
+[info] +  firebase.storage: rules file storage.rules compiled successfully 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-12-16T09:10:34.143Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test [none]
+[debug] [2022-12-16T09:10:34.143Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test [omitted]
+[debug] [2022-12-16T09:10:35.557Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test 200
+[debug] [2022-12-16T09:10:35.558Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-12-16T09:10:35.563Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/outreach-planner-cpe/versions [none]
+[debug] [2022-12-16T09:10:35.563Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/outreach-planner-cpe/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-16T09:10:37.228Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/outreach-planner-cpe/versions 200
+[debug] [2022-12-16T09:10:37.229Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/outreach-planner-cpe/versions {"name":"projects/379355534849/sites/outreach-planner-cpe/versions/848db7460ef7f165","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-12-16T09:10:37.229Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/releases pageSize=10&pageToken=
+[debug] [2022-12-16T09:10:40.448Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/releases 200
+[debug] [2022-12-16T09:10:40.448Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/releases {"releases":[{"name":"projects/outreach-planner-cpe/releases/cloud.firestore","rulesetName":"projects/outreach-planner-cpe/rulesets/210cf18e-5eea-44f3-a4cc-a48428e300e8","createTime":"2022-10-25T17:00:59.448742Z","updateTime":"2022-12-15T13:06:37.118957Z"},{"name":"projects/outreach-planner-cpe/releases/firebase.storage/outreach-planner-cpe.appspot.com","rulesetName":"projects/outreach-planner-cpe/rulesets/be89afce-c09f-400a-a5b9-0d4837607881","createTime":"2022-10-26T07:45:25.593997Z","updateTime":"2022-12-15T13:06:35.809230Z"}]}
+[debug] [2022-12-16T09:10:40.457Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/rulesets/be89afce-c09f-400a-a5b9-0d4837607881 [none]
+[debug] [2022-12-16T09:10:44.288Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/rulesets/be89afce-c09f-400a-a5b9-0d4837607881 200
+[debug] [2022-12-16T09:10:44.288Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/rulesets/be89afce-c09f-400a-a5b9-0d4837607881 [omitted]
+[info] i  storage: latest version of storage.rules already up to date, skipping upload... 
+[debug] [2022-12-16T09:10:44.290Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/releases pageSize=10&pageToken=
+[debug] [2022-12-16T09:10:44.291Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/outreach-planner-cpe/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-12-16T09:10:45.249Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/outreach-planner-cpe/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-12-16T09:10:45.249Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/outreach-planner-cpe/databases/(default)/collectionGroups/-/indexes {"indexes":[{"name":"projects/outreach-planner-cpe/databases/(default)/collectionGroups/outreach-programs/indexes/CICAgJim14AK","queryScope":"COLLECTION","fields":[{"fieldPath":"isApproved","order":"ASCENDING"},{"fieldPath":"date","order":"ASCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}],"state":"READY"},{"name":"projects/outreach-planner-cpe/databases/(default)/collectionGroups/outreach-programs/indexes/CICAgOjXh4EK","queryScope":"COLLECTION","fields":[{"fieldPath":"isApproved","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/outreach-planner-cpe/databases/(default)/collectionGroups/outreach-programs/indexes/CICAgJjF9oIK","queryScope":"COLLECTION","fields":[{"fieldPath":"isApproved","order":"ASCENDING"},{"fieldPath":"date","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"},{"name":"projects/outreach-planner-cpe/databases/(default)/collectionGroups/outreach-programs/indexes/CICAgJiUpoMK","queryScope":"COLLECTION","fields":[{"fieldPath":"isApproved","order":"ASCENDING"},{"fieldPath":"createdAt","order":"ASCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}],"state":"READY"},{"name":"projects/outreach-planner-cpe/databases/(default)/collectionGroups/outreach-programs/indexes/CICAgNi47oMK","queryScope":"COLLECTION","fields":[{"fieldPath":"authorId","order":"ASCENDING"},{"fieldPath":"date","order":"ASCENDING"},{"fieldPath":"__name__","order":"ASCENDING"}],"state":"READY"}]}
+[debug] [2022-12-16T09:10:45.250Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/outreach-planner-cpe/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-12-16T09:10:45.737Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/releases 200
+[debug] [2022-12-16T09:10:45.737Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/releases {"releases":[{"name":"projects/outreach-planner-cpe/releases/cloud.firestore","rulesetName":"projects/outreach-planner-cpe/rulesets/210cf18e-5eea-44f3-a4cc-a48428e300e8","createTime":"2022-10-25T17:00:59.448742Z","updateTime":"2022-12-15T13:06:37.118957Z"},{"name":"projects/outreach-planner-cpe/releases/firebase.storage/outreach-planner-cpe.appspot.com","rulesetName":"projects/outreach-planner-cpe/rulesets/be89afce-c09f-400a-a5b9-0d4837607881","createTime":"2022-10-26T07:45:25.593997Z","updateTime":"2022-12-15T13:06:35.809230Z"}]}
+[debug] [2022-12-16T09:10:45.738Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/rulesets/210cf18e-5eea-44f3-a4cc-a48428e300e8 [none]
+[debug] [2022-12-16T09:10:47.705Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/outreach-planner-cpe/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-12-16T09:10:47.705Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/outreach-planner-cpe/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/outreach-planner-cpe/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] i  firestore: The following indexes are defined in your project but are not present in your firestore indexes file:
+	(outreach-programs) -- (authorId,ASCENDING) (date,ASCENDING)  
+[debug] [2022-12-16T09:10:49.534Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/rulesets/210cf18e-5eea-44f3-a4cc-a48428e300e8 200
+[debug] [2022-12-16T09:10:49.534Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/outreach-planner-cpe/rulesets/210cf18e-5eea-44f3-a4cc-a48428e300e8 [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
